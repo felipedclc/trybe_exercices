@@ -1,0 +1,83 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0em;
+    line-height: 1.6em;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    letter-spacing: .05em;
+    line-height: 1.4em;
+    text-transform: none;
+}
+
+img {
+    margin-top: 50px;
+    border-radius: 100%;
+}
+
+#left-side {
+    background-color: rgb(15, 52, 121);
+    float: left;
+    width: 20%;
+    color: seashell;
+    text-align: center;
+    padding: 0 5%;
+    min-height: 600px;
+}
+
+#right-side {
+    float: right;
+    width: 55%;
+    margin: 5%;
+    padding: 20px;
+    background-color: rgb(175, 243, 255);
+    border-radius: 30px;
+}
+
+#right-side p {
+    margin-top: 50px;
+    font-size: 0.8em;
+}
+
+#right-side h1 {
+    margin-bottom: 10%;
+}
+
+.contact, .contact a {
+    text-align: left;
+    margin-top: 20%;
+    color: white;
+}
+
+#curriculo {
+    margin-bottom: 8%;
+}
+
+#linkedin {
+    margin-bottom: 8%;
+}
+
+#github {
+    margin-bottom: 8%;
+}
+
+#logo-trybe img{
+    width: 50px;
+    margin: 10% 5%;
+    float: right;
+}
+
+#footer {
+    clear: both;
+    text-align: center;
+    background-color: lightgray;
+}
