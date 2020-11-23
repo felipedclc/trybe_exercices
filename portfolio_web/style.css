@@ -31,7 +31,7 @@ img {
     color: seashell;
     text-align: center;
     padding: 0 5%;
-    min-height: 630px;
+    height: 100vh;
 }
 
 #right-side {
