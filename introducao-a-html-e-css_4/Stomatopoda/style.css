@@ -70,7 +70,7 @@ section #table {
 }
 
 #fact1 h3 {
-    text-align: left;
+    text-align: leftgit;
     color: yellow;
     font-weight: bold;
     margin-bottom: 20px;
@@ -111,10 +111,14 @@ section #table {
 }
 
 #referencias {
-    text-align: center;
     margin: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
     background-color: thistle;
     color: black;
+    width: 250px;
 }
 
 #referencias a {
