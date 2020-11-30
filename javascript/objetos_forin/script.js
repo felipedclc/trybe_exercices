@@ -80,8 +80,7 @@ console.log('--------------')
 for (let properties in info) {
     if (info[properties] == info.recorrente && info.recorrente == 'sim' && info2.recorrente == 'sim') {
         console.log('ambos');
-    }
-    else {
+    } else {
         console.log(info[properties] + ' e ' + info2[properties])
     }
 }
@@ -89,3 +88,24 @@ for (let properties in info) {
 /* const infoJuncao = Object.assign(info, info2);
 console.log(infoJuncao);
  */
+
+ console.log('***************************')
+// FUNCOES
+function isAPalindromo(word) {
+    arrayLetters = word.split('');
+    if(arrayLetters.reverse('').join('') === word) {
+        return 'Its a palindrono';
+    }
+    else {
+        return 'Not is a palindrono';
+    }
+    
+}
+console.log(isAPalindromo('arara'));
+console.log(isAPalindromo('desenvolvimento'));
+
+let palavra = 'olá, eu sou o Goku';
+let arrayPalavra = palavra.split('');
+console.log(arrayPalavra);
+console.log(arrayPalavra.join(''));
+
