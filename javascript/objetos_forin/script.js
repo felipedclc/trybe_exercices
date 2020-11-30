@@ -109,3 +109,16 @@ let arrayPalavra = palavra.split('');
 console.log(arrayPalavra);
 console.log(arrayPalavra.join(''));
 
+console.log('-------------------------')
+
+function smallerIndex(array) {
+    let menor = Math.min(...array);
+    for(let i in array) {
+       if(menor === array[i]) {
+           return i;
+       }
+    }
+    console.log(menor)
+}
+let array = [5,2,3,8,4,65,78,8,36]
+console.log(higherIndex(array));
