@@ -1,6 +1,6 @@
-////// OBJETO LITERAL 
+////// OBJETO LITERAL
 
-const player = {
+/* const player = {
     name: 'Marta',
     lastName: 'Silva',
     age: 34,
@@ -25,13 +25,13 @@ let pizzas = {
 let pizzasDoces = ['Morango', 'Chocolate', 'Banana'];
 pizzasDoces.preco = '30.00, 25.00, 27.80'; // criando valores para um array
 console.log(pizzasDoces.preco);
-for(let key in pizzasDoces) {
+for (let key in pizzasDoces) {
     console.log(pizzasDoces);
 }
 
-for(let key in pizzas) {
-    /* console.log(key); // chaves do objeto (chave: valor)
-    console.log(pizzas); // objeto completo */
+for (let key in pizzas) {
+    console.log(key); // chaves do objeto (chave: valor)
+    console.log(pizzas); // objeto completo
     console.log(key, pizzas[key]); // valores do objeto
 }
 console.log('--------------')
@@ -40,11 +40,52 @@ console.log('--------------')
 function area(base, altura) {
     return base * altura;
 }
+
 function perimetro(base, altura) {
-    return base*2 + altura*2;
+    return base * 2 + altura * 2;
 }
 
 let base = 30.05;
 let altura = 21.04;
 
-console.log(`A área é igual a ${area(base, altura).toFixed(2)} e o perímetro é ${perimetro(base, altura).toFixed(2)}. `)
+console.log(`A área é igual a ${area(base, altura).toFixed(2)} e o perímetro é ${perimetro(base, altura).toFixed(2)}. `); 
+*/
+
+const info = {
+    personagem: 'Margarida',
+    origem: 'Pato Donald',
+    nota: 'Namorada do personagem principal nos quadrinos do Pato Donald',
+}
+
+console.log(`Bem vinda ${info.personagem}`);
+info.recorrente = 'sim';
+console.log(info);
+
+for (let key in info) {
+    console.log(key);
+}
+console.log('-------------')
+for (let key in info) {
+    console.log(info[key]);
+}
+
+const info2 = {
+    personagem: 'Tio Patinhas',
+    origem: 'Christmas on Bear Mountain, Dells Four Color Comics #178',
+    nota: 'O último MacPatinhas',
+    recorrente: 'sim',
+}
+console.log('--------------')
+
+for (let properties in info) {
+    if (info[properties] == info.recorrente && info.recorrente == 'sim' && info2.recorrente == 'sim') {
+        console.log('ambos');
+    }
+    else {
+        console.log(info[properties] + ' e ' + info2[properties])
+    }
+}
+
+/* const infoJuncao = Object.assign(info, info2);
+console.log(infoJuncao);
+ */
