@@ -64,7 +64,8 @@ console.log(info);
 for (let key in info) {
     console.log(key);
 }
-console.log('-------------')
+console.log('----------------------')
+
 for (let key in info) {
     console.log(info[key]);
 }
@@ -75,7 +76,7 @@ const info2 = {
     nota: 'O último MacPatinhas',
     recorrente: 'sim',
 }
-console.log('--------------')
+console.log('----------------------')
 
 for (let properties in info) {
     if (info[properties] == info.recorrente && info.recorrente == 'sim' && info2.recorrente == 'sim') {
@@ -89,17 +90,16 @@ for (let properties in info) {
 console.log(infoJuncao);
  */
 
- console.log('***************************')
+console.log('***************************')
 // FUNCOES
 function isAPalindromo(word) {
     arrayLetters = word.split('');
-    if(arrayLetters.reverse('').join('') === word) {
+    if (arrayLetters.reverse('').join('') === word) {
         return 'Its a palindrono';
-    }
-    else {
+    } else {
         return 'Not is a palindrono';
     }
-    
+
 }
 console.log(isAPalindromo('arara'));
 console.log(isAPalindromo('desenvolvimento'));
@@ -109,16 +109,48 @@ let arrayPalavra = palavra.split('');
 console.log(arrayPalavra);
 console.log(arrayPalavra.join(''));
 
-console.log('-------------------------')
+console.log('----------------------')
 
 function smallerIndex(array) {
     let menor = Math.min(...array);
-    for(let i in array) {
-       if(menor === array[i]) {
-           return i;
-       }
+    for (let i in array) {
+        if (menor === array[i]) {
+            return i;
+        }
     }
-    console.log(menor)
 }
-let array = [5,2,3,8,4,65,78,8,36]
-console.log(higherIndex(array));
+
+let array = [5, 2, 3, 8, 4, 65, 78, 8, 36]
+console.log(smallerIndex(array));
+
+console.log('----------------------')
+
+function biggerIndex(array) {
+    let maior = Math.max(...array);
+    for (let i in array) {
+        if (maior === array[i]) {
+            return i;
+        }
+    }
+}
+console.log(biggerIndex(array));
+
+console.log('----------------------')
+
+function biggestName(lista) {
+    let comprimento = 0;
+    let biggestWord = '';
+    for (let i in lista) {
+        if (lista[i].length > comprimento) {
+            comprimento = lista[i].length;
+            biggestWord = lista[i];
+        }
+    }
+    return biggestWord;
+}
+
+let arrayTeste = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+console.log(biggestName(arrayTeste));
+
+console.log('----------------------')
+
