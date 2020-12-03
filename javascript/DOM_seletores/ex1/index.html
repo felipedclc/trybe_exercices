@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div class="lista-bike">
+        <h1>Nomes bike</h1>
+        <p>Sense</p>
+        <p>Caloi</p>
+        <p>Groove</p>
+        <p>Specialized</p>
+        <p>Cannodale</p>
+        <hr>
+    </div>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph">Segundo parágrafo!</p>
+    <p id="mude-p">mude-me agola</p>
+    <span>venha me mudar bbc</span>
+
+    <script>
+        let title = document.getElementById('page-title');
+        title.innerText = 'Mudança de titulo';
+        var paragraph = document.getElementById("paragraph");
+        paragraph.style.color = "red";
+        let subtitle = document.getElementById('subtitle');
+        subtitle.innerHTML = '<hr> <h3> Subtitle e tag changes by me mdfk!</h3> <hr>';
+        let secondPar = document.getElementById('second-paragraph');
+        secondPar.style.backgroundColor = 'blue';
+
+        let mudaSpan = document.getElementsByTagName('span')[0];
+        mudaSpan.innerText = 'Wilian Bigode';
+        document.querySelector('span').innerText = 'Juan Pablo Bigode';
+
+        document.querySelector('#mude-p').innerText = 'Adogo o querySelector'
+
+        let listaBikes = document.getElementsByClassName('lista-bike');
+        for (let i in listaBikes) {
+            listaBikes[i].style.backgroundColor = 'green';
+        }
+    </script>
+</body>
+
+</html>
