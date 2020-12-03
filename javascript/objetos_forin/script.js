@@ -154,3 +154,14 @@ console.log(biggestName(arrayTeste));
 
 console.log('----------------------')
 
+function contaNumRepetido(array) {
+    let contador = 0;
+    let repetido = 0;
+    for (let i in array) {
+             
+    }
+    
+}
+
+let numeros = [2, 3, 2, 5, 8, 2, 3];
+console.log(contaNumRepetido(numeros)) 
