@@ -1,0 +1,91 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    margin-top: 30px;
+    border-radius: 100%;
+}
+
+article p {
+    margin-top: 40px;
+    margin-bottom: 45px;
+    font-size: 0.8em;
+}
+
+h1 {
+    margin: 6%;
+    text-align: center;
+    color: rgb(15, 52, 121);
+
+}
+
+#container{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0em;
+    line-height: 1.6em;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    letter-spacing: .05em;
+    line-height: 1.4em;
+    text-transform: none;
+}
+
+#left-side {
+    background-color: rgb(15, 52, 121);
+    float: left;
+    width: 15%;
+    color: seashell;
+    text-align: center;
+    padding: 0 5%;
+    height: 100vh;
+}
+
+#right-side {
+    float: right;
+    width: 69%;
+    padding: 20px;
+}
+
+.contact a {
+    text-align: left;
+    margin-top: 25%;
+    display: block;
+    color: rgb(0, 20, 58);
+    background-color: rgb(194, 188, 188);
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 100px;
+   /* text-indent: 30%;*/
+}
+
+.contact a:hover {
+    color: rgb(199, 194, 194);
+    background-color: rgb(1, 30, 85);
+}
+
+#logo-trybe img{
+    width: 50px;
+    position: absolute;
+    left: 93%;
+    top: 80%;
+}
+
+#habilidades ul {
+    float: left;
+    margin-top: 30px;
+}
+
+#habilidades ul li {
+    float: left;
+    margin-left: 10px;
+    
+}

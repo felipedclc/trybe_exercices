@@ -5,90 +5,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Felipe</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 400;
-            font-size: 16px;
-            letter-spacing: 0em;
-            line-height: 1.6em;
-            font-family: myriad-pro;
-            font-weight: 300;
-            font-style: normal;
-            font-size: 18px;
-            letter-spacing: .05em;
-            line-height: 1.4em;
-            text-transform: none;
-            color: #858585;
-        }
-
-        #habilidades {
-            font-weight: bold;
-            list-style: none;
-            margin-left: 10px;
-        }
-
-        #habilidades ul,
-        li {
-            list-style: none;
-            margin-left: 10px;
-        }
-
-        li:hover {
-            color: black;
-        }
-
-        .curriculo {
-            list-style: none;
-            font-weight: bolder;
-            margin-left: 10px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
-
 <body>
-    <header>
-        <div id="apresentacao">
-            <h1>Felipe de Carvalho Lopes Cardoso</h1>
+    <div id="container">
 
-            <img src="perfil.png" alt="foto do perfil" width="250px">
+        <header id="header">
+            <div id="left-side">
+                <img src="perfil.png" alt="foto do perfil" width="200px">
 
-            <h3>Brasileiro, Belo Horizonte - MG</h3>
+                <nav class="contact">
+                    <ul>
+                        <li>
+                            <a href="Curriculo_Felipe Cardoso.pdf" target="_blank">Currículo</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.linkedin.com/in/felipe-de-carvalho-lopes-cardoso/"
+                                target="_blank">Linkedin</a>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/felipedclc" target="_blank">Github</a>
+                        </li>
+                    </ul>
+
+                </nav>
+
+            </div>
+        </header>
+
+
+        <main id="right-side">
+            <section>
+                <h1>Felipe de Carvalho Lopes Cardoso</h1>
+                <article>
+
+                    <h3>Estudante de desenvolvimento de software</h3>
+
+                    <p>
+                        Sou estudante de desenvolvimento de software com bacharelado em engenharia ambiental e estou
+                        busca
+                        de
+                        novos
+                        desafios, tenho curiosidade em aprender novas tecnologias e estou em constante
+                        aprendizado.
+                    </p>
+
+                    <p>
+                        Estou fazendo um curso voltado para desenvolvimento web full stack na Trybe, uma escola que se
+                        preocupa
+                        não
+                        apenas com o conhecimento técnico mas támbem com o comportamental, preparano o aluno com
+                        simulações
+                        reais no
+                        mercado de trabalho.
+                    </p>
+                </article>
+
+                <article id="habilidades">
+                    <h3>Habilidades</h3>
+                    <ul>
+                        <li>Git |</li>
+                        <li>HTML, CSS, JS |</li>
+                        <li>React, Redux |</li>
+                        <li>MySQL, MongoDB |</li>
+                        <li>Python |</li>
+                        <li>Java |</li>
+                        <li>SCRUM</li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div id="logo-trybe">
+            <a href="https://www.betrybe.com/" target="_blank">
+                <img src="ZjoZA8iH_400x400.png" alt="trybe logo">
+            </a>
         </div>
-    </header>
-
-
-
-    <div id="habilidades">
-        <h4>Habilidades:</h4>
-        <ul>
-            <li>HTML, CSS, Javascript
-                <a href="http://"></a>
-            </li>
-            <li>React, Redux</li>
-            <li>NodeJs</li>
-            <li>Python</li>
-            <li>Java</li>
-        </ul>
-    </div>
-
-    <div class="curriculo">
-        <ul>
-            <li>
-                <a href="Curriculo_Felipe Cardoso.pdf" target="_blank">Currículo</a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/felipe-de-carvalho-lopes-cardoso/" target="_blank">Linkedin</a>
-            </li>
-        </ul>
-
-
-    </div>
-
-
+    </footer>
 
 </body>
 
