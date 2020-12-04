@@ -37,3 +37,13 @@ for(let i in dezDaysList) {
   
   daysUl.appendChild(li);
 }
+
+function createBtnHolliday() {
+  let btnHoliday = document.createElement('button');
+  btnHoliday.innerHTML = 'feriados';
+  btnHoliday.id = 'btn-holiday';
+
+  let paiBtn = document.querySelector('.buttons-container');
+  paiBtn.appendChild(btnHoliday);
+}
+createBtnHolliday();
