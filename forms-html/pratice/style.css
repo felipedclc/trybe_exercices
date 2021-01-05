@@ -29,3 +29,16 @@ body {
     width: 60%;
     margin-left: 10px;
 }
+
+.line-content2 {
+    display: grid;
+    padding: 5px;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.line-down {
+    display: grid;
+    margin: 10px;
+    padding: 10px;
+}
