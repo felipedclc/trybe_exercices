@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(192, 192, 192);
+    color: rgb(34, 34, 34);
+    font-family: Tahoma, sans-serif;
+    font-size: 1.1em;
+}
+
+.header-register {
+    color: brown;
+    text-align: center;
+    margin: 30px;
+}
+
+.form-align {
+    background-color: rgb(222, 222, 222);
+    margin: 0 auto;
+    width: 60%;
+}
+
+.line-content {
+    display: grid;
+    padding: 5px;
+    width: 60%;
+    margin-left: 10px;
+}
