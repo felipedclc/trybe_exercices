@@ -14,7 +14,7 @@
         <h1>Cadastro de currículo</h1>
     </header>
 
-    <form action="" class="form-align">
+    <form action="" method="GET" class="form-align" id="formulario">
         <fieldset>
             <div class="line-content">
                 <label for="name">Nome</label>
@@ -55,7 +55,7 @@
         <fieldset class="line-content2">
             <div class="line-down">
                 <label class="line-down" for="res-curriculo">Resumo do currículo</label>
-                <textarea name="resumo" id="res-curriculo" cols="30" rows="10" maxlength="100" required></textarea>
+                <textarea name="resumo" id="res-curriculo" cols="30" rows="10" maxlength="200" required></textarea>
             </div>
             <hr>
             <div class="line-down">
@@ -74,8 +74,11 @@
                 <label for="">Data de término</label>
                 <input type="date" id="fin-date" placeholder="Caso exista">
             </div>
-            
         </fieldset>
+
+        <div class="btn-send line-down">
+            <button type="submit" id="send">Enviar</button>
+        </div>
     </form>
 
 
