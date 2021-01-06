@@ -28,6 +28,10 @@ function sendForm() {
     });
 }
 
+function clearForm() {
+    
+}
+
 window.onload = function () {
     createStates();
     sendForm();
