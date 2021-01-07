@@ -18,12 +18,14 @@ body {
     display: flex;
     justify-content: center;
     order: -1;
-    width: 268px;
+    flex-basis: 268px;
 }
 
 .menu-container {
     display: flex;
-    width: 500px;
+    flex-basis: 500px;
+    flex-grow: 1;
+    align-self: center;
 }
 
 .menu-container ul {
