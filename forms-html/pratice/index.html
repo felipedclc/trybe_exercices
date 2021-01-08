@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form curriculo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header-register">
+        <h1>Cadastro de currículo</h1>
+    </header>
+
+    <form action="" method="GET" class="form-align" id="formulario">
+        <fieldset>
+            <div class="line-content">
+                <label for="name">Nome</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="line-content">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="line-content">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" required>
+            </div>
+
+            <div class="line-content">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" required>
+            </div>
+
+            <div class="line-content">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" required>
+            </div>
+
+            <div class="line-content">
+                <label for="estados">Estado</label>
+                <select name="estado" id="estados" required></select>
+            </div>
+
+            <div class="line-content">
+                <label for="casa"><input name="residencia" type="radio" id="casa" value="casa" required>Casa</label>
+                <label for="ap"><input name="residencia" type="radio" id="ap" value="ap" required>Apartamento</label>
+            </div>
+        </fieldset>
+
+        <fieldset class="line-content2">
+            <div class="line-down">
+                <label class="line-down" for="res-curriculo">Resumo do currículo</label>
+                <textarea name="resumo" id="res-curriculo" cols="30" rows="10" maxlength="200" required></textarea>
+            </div>
+            <hr>
+            <div class="line-down">
+                <label for="cargo">Cargo</label>
+                <input type="text" name="cargo" maxlength="40" id="cargo" required>
+            </div>
+            <div class="line-down">
+                <label for="descricao-cargo">Descrição do cargo</label>
+                <input type="text" name="descricao-cargo" maxlength="500" id="descricao-cargo" required>
+            </div>
+
+            <div class="line-content">
+                <label for="">Data de início</label>
+                <input type="date" id="ini-date" required>
+
+                <label for="">Data de término</label>
+                <input type="date" id="fin-date" placeholder="Caso exista">
+            </div>
+        </fieldset>
+
+        <div class="btn-send line-down">
+            <button type="submit" id="send" class="margin-botton">Enviar</button>
+            <button type="button" id="clear">Limpar</button>
+        </div>
+    </form>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

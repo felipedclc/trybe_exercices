@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="form-header box-style">
+        <h1>My first form</h1>
+        <p>Quer palestrar na melhor conferência do mundo?Preencha o formulário!</p>
+    </header>
+
+    <form action="index.html" method="GET" class="form-login box-style">
+        <div>
+            <label for="input-name">Digite seu nome</label>
+            <input type="text" autofocus placeholder="digite algo" required name="text" id="input-name">
+        </div>
+
+        <div>
+            <label for="input-senha">Digite sua senha</label>
+            <input type="password" placeholder="digite a senha" required name="text" value="" id="input-name">
+        </div>
+    </form>
+
+    <form action="" method="GET" class="form-senha box-style">
+
+    </form>
+
+    <form action="" method="GET">
+        <textarea name="text-area" id="text-area" cols="30" rows="10">met consectetur adipisicing</textarea>
+        <button type="submit">Send</button>
+    </form>
+    <br>
+    <br>
+
+    <form action="">
+        <fieldset class="fieldset-ativ">
+            <legend>Atividades</legend>
+            <input type="checkbox" id="atividade1" value="cic" name="atividade" checked> Ciclismo
+            <input type="checkbox" id="atividade1" value="cor" name="atividade"> Corrida
+            <input type="checkbox" id="atividade1" value="fut" name="atividade" checked> Futebol
+            <input type="checkbox" id="atividade1" value="aca" name="atividade"> Academia
+        </fieldset>
+        <br>
+        <label for="sao"><input type="radio" id="sao" name="local" value="sp">São Paulo</label>
+        <label for="bel"><input type="radio" id="bel" name="local" value="bh">Belo Horizonte</label>
+        <input type="radio" id="" name="local" value="fl">Florianópolis
+    </form>
+    <br>
+    <br>
+
+    <form action="">
+        <label for="drop-down-estado">Estado</label>
+        <select name="estado" id="drop-down-estado">
+            <option value="sp">SP</option>
+            <option value="bh">MG</option>
+            <option value="ba">BA</option>
+            <option value="rs">RS</option>
+        </select>
+    </form>
+    <br>
+    <br>
+
+    <!-- submissao de arquivos -->
+    <form action="" method="GET" enctype="multipart/form-data">
+        <input type="file" placeholder="digite a senha" required name="text" value="" id="input-file">
+    </form>
+
+</body>
+</html>
