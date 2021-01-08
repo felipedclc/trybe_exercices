@@ -142,15 +142,34 @@ addTaskColor('blue');
 
 function taskSelected() {
   let divTask = document.querySelector('.task');
-  
-  divTask.addEventListener('click', function(e) {
-    if(e.target.className === 'task') {
-      e.target.className = 'task-selected';
-    }
-    else {
+
+  divTask.addEventListener('click', function (e) {
+    if (e.target.className === 'task') {
+      e.target.className = 'task selected';
+    } else {
       e.target.className = 'task';
     }
   })
 };
 taskSelected();
 
+function changeDayColor() {
+  let daysUl = document.querySelector('#days');
+  let dayLi = document.querySelectorAll('li.day');
+  let taskSelected = document.querySelector('.task');
+  divTaskColor = taskSelected.style.backgroundColor;
+
+  daysUl.addEventListener('click', function (e) {
+    for (let i in dayLi) {
+      day = dayLi[i];
+
+      if (day.style.color !== 'rgb(119,119,119)') {
+        day.style.color = divTaskColor;
+      }
+      else {
+        day.style.color = 'rgb(119,119,119)';
+      }
+    }
+  })
+};
+changeDayColor();
