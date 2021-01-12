@@ -75,7 +75,7 @@ h3 {
     height: 15vh;
     margin-top: 20px;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     opacity: 0.8;
     /* text-indent: 30%;*/
 }
@@ -93,7 +93,6 @@ h3 {
 #habilidades ul li {
     float: left;
     margin-left: 10px;
-
 }
 
 i {
