@@ -20,9 +20,9 @@ const student2 = {
 
 function exibeHability(student) {
     const habilityList = Object.keys(student); // OBTENDO AS CHAVES(KEYS)
-    for (let i in habilityList) {
-        console.log(`${habilityList[i]}, Nivel: ${student[habilityList[i]]}`);
-        //                  CHAVE                        VALOR
+    for (hability in habilityList) {
+        console.log(`${habilityList[hability]}, Nivel: ${student[habilityList[hability]]}`);
+        //                  CHAVE                              VALOR
     }
 }
 exibeHability(student1);
