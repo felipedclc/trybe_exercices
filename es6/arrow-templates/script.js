@@ -56,5 +56,5 @@ function longestWord(string) {
 }
 console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu"));
 
-// EM APENAS UMA LINHA COM SORT
+// EM APENAS UMA LINHA COM SORT - MAIOR PALAVRA DA FRASE
 const longestWord01 = text => text.split(' ').sort((wordA, wordB) => wordB.length - wordA.length)[0];
