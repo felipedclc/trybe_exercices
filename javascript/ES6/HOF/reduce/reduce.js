@@ -20,7 +20,7 @@ const getSum = (accumulator, number) => {
   return accumulator + number;
 };
 
-const sumNumbers3 = collection.reduce(getSum , 0); // 0 - valor inicial, na falta é a posição 0 do array
+const sumNumbers3 = collection.reduce(getSum); // 0 - valor inicial, na falta é a posição 0 do array
 console.log('sum of numbers: ' + sumNumbers3); // 15
 
 

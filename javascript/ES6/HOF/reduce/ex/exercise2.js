@@ -1,3 +1,8 @@
+const assert = require('assert');
+const {
+    all
+} = require('promise-polyfill');
+
 const books = [{
         id: 1,
         name: 'As Crônicas de Gelo e Fogo',
@@ -59,10 +64,14 @@ const books = [{
         releaseYear: 1928,
     },
 ];
+// Crie uma string com os nomes de todas as pessoas autoras.
 
-// Encontre o livro cujo nome possui 26 caracteres.
-function getNamedBook() {
-    books.find((value) => value.name.length === 26)
+function allNames() {
+    return books.reduce((acumulator, values, index, array) => {
+        return index !== array.length -1 ? `${acumulator} ${values.author.name},` : `${acumulator} ${values.author.name}.`;
+    }, 'Nomes:')
 }
 
-assert.deepStrictEqual(getNamedBook(), expectedResult);
+console.log(allNames())
+
+assert.deepStrictEqual(allNames(), "Nomes: George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.");
