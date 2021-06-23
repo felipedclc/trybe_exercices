@@ -1,0 +1,15 @@
+{
+  "name": "exercise1",
+  "version": "1.0.0",
+  "description": "exercicios do 1 dia de nodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "imc": "node imc.js"
+  },
+  "author": "Felipe Cardoso",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}

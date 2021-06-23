@@ -1,0 +1,12 @@
+{
+  "name": "pre-aula",
+  "version": "1.0.0",
+  "description": "exercicios pre aula",
+  "main": "exemplos.js",
+  "scripts": {
+    "start": "node exemplos.js",
+    "test": "mocha tests"
+  },
+  "author": "Felipe Cardoso",
+  "license": "ISC"
+}

@@ -1,0 +1,225 @@
+// MongoDB Playground
+// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
+// Make sure you are connected to enable completions and to be able to run a playground.
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// Select the database to use.
+use('erp');
+db.clientes.aggregate([
+  {
+    $group: {
+        _id: {
+            sexo: '$sexo',
+            uf: '$endereco.uf',
+        },
+        total: {
+            $sum: 1,
+        },
+    },
+  },
+  {
+    $project: {
+      'estado': '$_id.uf',
+      'sexo': '$_id.sexo',
+      'total': 1,
+      '_id': 0
+    }
+  }
+]);
+
+
+// selecionando o campo desejado com match e somando 
+// o valor todal das vendas com o sum
+
+use('erp');
+db.vendas.aggregate([
+  {
+    $match: {
+      status: {
+        $in: ["EM SEPARACAO", "ENTREGUE"],
+      }
+    }
+  },
+  {
+    $group: {
+      _id: {clienteId: "$clienteId"},
+      valorTotal: { $sum: "$valorTotal" }
+    }
+  },
+  {
+    $sort: { valorTotal: -1}
+  },
+  {
+    $limit: 5
+  }
+]);
+
+// somando o valor total e pegando o cliente com 
+// parametro para data pela data
+use('erp');
+db.vendas.aggregate([
+  {
+    $match: {
+      dataVenda: {
+        $gte: ISODate("2019-01-01"),
+        $lte: ISODate("2019-12-31")   
+      }
+    }
+  },
+  {
+    $group: {
+      _id: {clienteId: "$clienteId"},
+      valorTotal: {$sum: "$valorTotal"}
+    }
+  },
+  {
+    $sort: {valorTotal: -1}
+  },
+  {
+    $limit: 10,
+  },
+]);
+
+// filtrando quantos clientes fizeram mais de 5 compras 
+use('erp');
+db.vendas.aggregate([
+  {
+    $group: {
+      _id: "$clienteId",
+      totalDeCompras: { $sum: 1 },
+    },
+  },
+  {
+    $match: { totalDeCompras: {$gte: 5} },
+  },
+  {
+    $group: {
+      _id: null,
+      clientes: { $sum: 1 },
+    },
+  },
+  {
+    $project: { _id: 0 },
+  },
+]);
+
+// filtrando quantos clientes compraram menos de 
+// 3 vezes entre janeiro e março
+use('erp');
+db.vendas.aggregate([
+  {
+    $match: {
+      dataVenda: {
+        $gte: ISODate("2020-01-01"),
+        $lte: ISODate("2020-03-31"),
+      }
+    }
+  },
+  {
+    $group: {
+      _id: "$clienteId",
+      totalCompras: {$sum: 1},
+    }
+  },
+  {
+    $match: {
+      totalCompras: { $lt: 3 }
+    }
+  },
+  {
+    $count: 'Clientes'
+  },
+]);
+
+// acessando os dados da collection vendas,
+// filtrando as datas com match jutando os dados
+// com o db de clientes usando o lookup
+
+use('erp');
+db.vendas.aggregate([
+  {
+    $match: { 
+      dataVenda: {$gte: ISODate("2020-01-01")} 
+    }
+  },
+  {
+    $lookup: {
+      from: 'clientes',
+      localField: 'clienteId',
+      foreignField: 'clienteId',
+      as: 'dadosCliente',
+    }
+  },
+  {
+    $unwind: "$dadosCliente"
+  },
+  {
+    $match: {
+      "status": {$in: ["EM SEPARACAO", "ENTREGUE"]},
+    }
+  },
+  {
+    $group: {
+      _id: "$dadosCliente.endereco.uf",
+      totalVendas: {$sum: 1},
+    }
+  },
+  {
+    $sort: { totalVendas: -1 }
+  },
+  {
+    $limit: 3,
+  },
+  {
+    $project: {
+      _id: 0,
+      uf: "$_id",
+      totalVendas: 1,
+    }
+  }
+]);
+
+// juntando com a tabela clientes e calculando a media
+
+use('erp');
+db.vendas.aggregate([
+  {
+    $match: {
+      dataVenda: {
+        $lt: ISODate("2020-01-01"),
+        $gte: ISODate("2019-01-01"),
+      },
+      status: {$in: ["EM SEPARACAO", "ENTREGUE"]},
+    }
+  },
+  {
+    $lookup: {
+      from: 'clientes',
+      localField: 'clienteId',
+      foreignField: 'clienteId',
+      as: 'dadosCliente'
+    }
+  },
+  {
+    $unwind: "$dadosCliente"
+  },
+  {
+    $group: {
+      _id: "$dadosCliente.endereco.uf",
+      totalVendas: {$sum: 1},
+      mediaVendas: {$avg: "$valorTotal"}
+    }
+  },
+  {
+    $sort: { _id: 1 },
+  },
+  {
+    $project: {
+      _id: 0,
+      uf: "$_id",
+      mediaVendas: 1,
+      totalVendas: 1,
+    }
+  }
+]);
+
