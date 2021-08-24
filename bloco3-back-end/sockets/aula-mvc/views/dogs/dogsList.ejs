@@ -1,0 +1,20 @@
+<html>
+
+<head>
+  <title>Dogs</title>
+</head>
+
+<body>
+  <ul style="background-color: antiquewhite">
+    <% dogs.forEach(dog => { %>
+      <li>Nome: <%= dog.name %> - Idade: <%= dog.age %> - <a href="/details/<%= dog.id %>">Detalhes</a></li>
+    <% }) %>
+  </ul>
+  <form action="/dogs" method="POST">
+    <input name="name" type="text">
+    <input name="age" type="number">
+    <button type="submit">Criar novo doguinho!</button>
+  </form>
+</body>
+
+</html>
